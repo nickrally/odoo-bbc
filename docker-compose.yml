@@ -1,0 +1,28 @@
+version: '3'
+services:
+  myodoo:
+    image: odoo:14
+    platform: $BUILDPLATFORM
+    depends_on:
+      - postgres
+    ports:
+      - "127.0.0.1:8070:8069"
+    env_file:
+      .env
+    volumes:
+      - ./addons:/mnt/extra-addons
+      - data:/var/lib/odoo
+  postgres:
+    image: postgres:13
+    restart: always
+    ports:
+      - 5432:5432
+    volumes:
+      - db:/var/lib/postgresql/data/pgdata
+    env_file:
+      .env
+
+
+volumes:
+  data:
+  db:

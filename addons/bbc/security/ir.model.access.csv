@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+bbc.access_bbc_writer,access_bbc_writer,bbc.model_bbc_writer,base.group_user,1,1,1,1
+bbc.access_bbc_book,access_bbc_book,bbc.model_bbc_book,base.group_user,1,1,1,1

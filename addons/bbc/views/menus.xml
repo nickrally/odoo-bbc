@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <record id="action_bbc_writer" model="ir.actions.act_window">
+        <field name="name">Writers</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">bbc.writer</field>
+        <field name="view_mode">tree,form</field>
+        <field name="context">{}}</field>
+        <field name="help" type="html">
+            <p>No writers yet</p>
+        </field>
+    </record>
+
+    <menuitem id="menu_bbc_root"
+              name="Bad Book Club"
+              sequence="0"/>
+
+    <menuitem id="menu_writer_master"
+              name="Writers"
+              action="action_bbc_writer"
+              parent="menu_bbc_root"
+              sequence="0"/>
+
+    <menuitem id="menu_book_master"
+              name="Books"
+              parent="menu_bbc_root"
+              sequence="20"/>
+</odoo>
